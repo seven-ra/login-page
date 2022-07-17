@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>会員登録完了</title>
+ <link rel="stylesheet" href="css/after_register.css">
+</head>
+<body>
+
+<header>
+  <div class="header_wrapper">
+   <img src="4eachblog_logo.jpg">
+   <div class="header_btn"><a href="login.php">ログイン</a></div>
+  </div>
+</header>
+
+<main>
+
+<div class="form">
+ <p>ご登録ありがとうございました。</p>
+ <a href="register.php">新規登録画面に戻る</a>
+</div>
+
+
+</main>
+
+<footer>
+    &copy; 2018 InterNous.inc. All rights reserved
+   </footer>
+  
+   <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+  </script>
+  
+  <script>
+  
+    //パスワードチェック
+    function ConfirmPassword(confirm) {
+     var input1 = password.value;
+     var input2 = confirm.value;
+     if(input1 != input2) {
+      confirm.setCustomValidity("パスワードが一致しません。");
+     } else {
+      confirm.setCustomValidity('');
+     }
+    }
+  
+    //フッターを最下部に固定
+    var $footer = $('footer');
+     if(window.innerHeight > $footer.offset().top + $footer.outerHeight()){
+       $footer.attr({'style': 'position:fixed; top:' + (window.innerHeight - $footer.outerHeight()) +'px;'});
+     }
+  
+  </script>
+  
+  
+</body>
+</html>
